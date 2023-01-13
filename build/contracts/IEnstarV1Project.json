@@ -1,0 +1,1651 @@
+{
+  "contractName": "IEnstarV1Project",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "string",
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "introduction",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "operate",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "create_time",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "account",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "balance",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "website",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "creator",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "country",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "province",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "city",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct IEnstarV1Project.Project",
+          "name": "_project",
+          "type": "tuple"
+        }
+      ],
+      "name": "setProject",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "checkProjectBalance",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_address",
+          "type": "address"
+        }
+      ],
+      "name": "authorizeInvestor",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_investor",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "timestamp",
+          "type": "uint256"
+        }
+      ],
+      "name": "invest",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_erc20Addr",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "investorWithdraw",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_erc20Addr",
+          "type": "address"
+        }
+      ],
+      "name": "projectWithdraw",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_contract",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "transferTest",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_contract",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_token",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOfTest",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"authorizeInvestor\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_contract\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_token\",\"type\":\"address\"}],\"name\":\"balanceOfTest\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"checkProjectBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_investor\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"timestamp\",\"type\":\"uint256\"}],\"name\":\"invest\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_erc20Addr\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"investorWithdraw\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_erc20Addr\",\"type\":\"address\"}],\"name\":\"projectWithdraw\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"introduction\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"operate\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"create_time\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"balance\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"website\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"creator\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"country\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"province\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"city\",\"type\":\"string\"}],\"internalType\":\"struct IEnstarV1Project.Project\",\"name\":\"_project\",\"type\":\"tuple\"}],\"name\":\"setProject\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_contract\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"transferTest\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"title\":\"The interface for a Enstar project\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"authorizeInvestor(address)\":{\"notice\":\"Authority of identifying investors.\"},\"checkProjectBalance()\":{\"notice\":\"Get the current balance of project.\"},\"invest(address,uint256,uint256)\":{\"notice\":\"Investor purchase share of project.\"},\"investorWithdraw(address,uint256)\":{\"notice\":\"Investor withdraw\"},\"projectWithdraw(address)\":{\"notice\":\"project withdraw\"},\"setProject((string,string,string,uint256,uint256,address,uint256,string,string,string,string,string))\":{\"notice\":\"set the project information.\"}},\"notice\":\"enstar project facilitates investing strictly conform to the ERC20 specification\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/IEnstarV1Project.sol\":\"IEnstarV1Project\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/IEnstarV1Project.sol\":{\"keccak256\":\"0x73061bdb4800587d3ee986942c5781253097f7780a42990a0b2c5d70c2eece43\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://b96980e3e81e338971178db8bf25e39bea9c227ab39b3a61208c596193fd3c07\",\"dweb:/ipfs/QmW2ZPZp2QvaqdcitAVgt15z1WiXsHK3zhD3AcJ2fAnBEj\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "/*\r\n * @Descripttion: enstar\r\n * @version: 1.0\r\n * @Author: pc,fsl,rli07\r\n * @Date: 2023-01-07 16:05:15\r\n * @LastEditors: rli07\r\n * @LastEditTime: 2023-01-08 12:37:19\r\n */\r\n\r\n// SPDX-License-Identifier: GPL-2.0-or-later\r\npragma solidity >=0.8.0;\r\n\r\n/// @title The interface for a Enstar project\r\n/// @notice enstar project facilitates investing strictly conform to the ERC20 specification\r\ninterface IEnstarV1Project\r\n{\r\n    struct Project{\r\n        string name;\r\n        string introduction;\r\n        string operate;\r\n        uint256 amount;\r\n        uint256 create_time;\r\n        address account; ///Trading account\r\n        uint256 balance; ///Current balance\r\n        string website;\r\n        string creator;\r\n        string country;\r\n        string province;\r\n        string city;\r\n    }\r\n\r\n    struct Investor{\r\n        address investor; ///Trading account\r\n        uint256 amount;\r\n        uint256 create_time;\r\n        uint256 update_time;\r\n    }\r\n\r\n    /// @notice set the project information.\r\n    function setProject(Project memory _project)\r\n        external;\r\n\r\n    /// @notice Get the current balance of project.\r\n    function checkProjectBalance()\r\n        external\r\n        view\r\n        returns (uint256);\r\n\r\n    /// @notice Authority of identifying investors.\r\n    function authorizeInvestor(address _address) \r\n        external \r\n        view \r\n        returns (bool);\r\n\r\n    /// @notice Investor purchase share of project.\r\n    function invest(address _investor, uint256 amount, uint256 timestamp) \r\n        external \r\n        payable \r\n        returns (bool);\r\n\r\n    /// @notice Investor withdraw\r\n    function investorWithdraw(address _erc20Addr, uint256 _amount) external returns (bool);\r\n\r\n    /// @notice project withdraw\r\n    function projectWithdraw(address _erc20Addr) external returns (bool);\r\n\r\n    function transferTest(\r\n        address _contract,\r\n        address sender,\r\n        address to,\r\n        uint256 amount\r\n    ) external returns (bool);\r\n\r\n    function balanceOfTest(\r\n        address _contract,\r\n        address _token\r\n    ) external view returns (uint256); \r\n\r\n    \r\n}",
+  "sourcePath": "D:\\solidityWorkSpace\\enstart\\enstar-v1-core\\contracts\\interfaces\\IEnstarV1Project.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interfaces/IEnstarV1Project.sol",
+    "exportedSymbols": {
+      "IEnstarV1Project": [
+        1466
+      ]
+    },
+    "id": 1467,
+    "license": "GPL-2.0-or-later",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1354,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "221:24:6"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IEnstarV1Project",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 1355,
+          "nodeType": "StructuredDocumentation",
+          "src": "249:141:6",
+          "text": "@title The interface for a Enstar project\n @notice enstar project facilitates investing strictly conform to the ERC20 specification"
+        },
+        "fullyImplemented": false,
+        "id": 1466,
+        "linearizedBaseContracts": [
+          1466
+        ],
+        "name": "IEnstarV1Project",
+        "nameLocation": "400:16:6",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "IEnstarV1Project.Project",
+            "id": 1382,
+            "members": [
+              {
+                "constant": false,
+                "id": 1357,
+                "mutability": "mutable",
+                "name": "name",
+                "nameLocation": "457:4:6",
+                "nodeType": "VariableDeclaration",
+                "scope": 1382,
+                "src": "450:11:6",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1356,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "450:6:6",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1359,
+                "mutability": "mutable",
+                "name": "introduction",
+                "nameLocation": "479:12:6",
+                "nodeType": "VariableDeclaration",
+                "scope": 1382,
+                "src": "472:19:6",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1358,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "472:6:6",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1361,
+                "mutability": "mutable",
+                "name": "operate",
+                "nameLocation": "509:7:6",
+                "nodeType": "VariableDeclaration",
+                "scope": 1382,
+                "src": "502:14:6",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1360,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "502:6:6",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1363,
+                "mutability": "mutable",
+                "name": "amount",
+                "nameLocation": "535:6:6",
+                "nodeType": "VariableDeclaration",
+                "scope": 1382,
+                "src": "527:14:6",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1362,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "527:7:6",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1365,
+                "mutability": "mutable",
+                "name": "create_time",
+                "nameLocation": "560:11:6",
+                "nodeType": "VariableDeclaration",
+                "scope": 1382,
+                "src": "552:19:6",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1364,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "552:7:6",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1367,
+                "mutability": "mutable",
+                "name": "account",
+                "nameLocation": "590:7:6",
+                "nodeType": "VariableDeclaration",
+                "scope": 1382,
+                "src": "582:15:6",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 1366,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "582:7:6",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1370,
+                "mutability": "mutable",
+                "name": "balance",
+                "nameLocation": "635:7:6",
+                "nodeType": "VariableDeclaration",
+                "scope": 1382,
+                "src": "627:15:6",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1369,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "627:7:6",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1373,
+                "mutability": "mutable",
+                "name": "website",
+                "nameLocation": "679:7:6",
+                "nodeType": "VariableDeclaration",
+                "scope": 1382,
+                "src": "672:14:6",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1372,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "672:6:6",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1375,
+                "mutability": "mutable",
+                "name": "creator",
+                "nameLocation": "704:7:6",
+                "nodeType": "VariableDeclaration",
+                "scope": 1382,
+                "src": "697:14:6",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1374,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "697:6:6",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1377,
+                "mutability": "mutable",
+                "name": "country",
+                "nameLocation": "729:7:6",
+                "nodeType": "VariableDeclaration",
+                "scope": 1382,
+                "src": "722:14:6",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1376,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "722:6:6",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1379,
+                "mutability": "mutable",
+                "name": "province",
+                "nameLocation": "754:8:6",
+                "nodeType": "VariableDeclaration",
+                "scope": 1382,
+                "src": "747:15:6",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1378,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "747:6:6",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1381,
+                "mutability": "mutable",
+                "name": "city",
+                "nameLocation": "780:4:6",
+                "nodeType": "VariableDeclaration",
+                "scope": 1382,
+                "src": "773:11:6",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1380,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "773:6:6",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Project",
+            "nameLocation": "432:7:6",
+            "nodeType": "StructDefinition",
+            "scope": 1466,
+            "src": "425:367:6",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "IEnstarV1Project.Investor",
+            "id": 1392,
+            "members": [
+              {
+                "constant": false,
+                "id": 1384,
+                "mutability": "mutable",
+                "name": "investor",
+                "nameLocation": "834:8:6",
+                "nodeType": "VariableDeclaration",
+                "scope": 1392,
+                "src": "826:16:6",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 1383,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "826:7:6",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1387,
+                "mutability": "mutable",
+                "name": "amount",
+                "nameLocation": "880:6:6",
+                "nodeType": "VariableDeclaration",
+                "scope": 1392,
+                "src": "872:14:6",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1386,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "872:7:6",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1389,
+                "mutability": "mutable",
+                "name": "create_time",
+                "nameLocation": "905:11:6",
+                "nodeType": "VariableDeclaration",
+                "scope": 1392,
+                "src": "897:19:6",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1388,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "897:7:6",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1391,
+                "mutability": "mutable",
+                "name": "update_time",
+                "nameLocation": "935:11:6",
+                "nodeType": "VariableDeclaration",
+                "scope": 1392,
+                "src": "927:19:6",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1390,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "927:7:6",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Investor",
+            "nameLocation": "807:8:6",
+            "nodeType": "StructDefinition",
+            "scope": 1466,
+            "src": "800:154:6",
+            "visibility": "public"
+          },
+          {
+            "documentation": {
+              "id": 1393,
+              "nodeType": "StructuredDocumentation",
+              "src": "962:40:6",
+              "text": "@notice set the project information."
+            },
+            "functionSelector": "9961cea7",
+            "id": 1399,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setProject",
+            "nameLocation": "1017:10:6",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1397,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1396,
+                  "mutability": "mutable",
+                  "name": "_project",
+                  "nameLocation": "1043:8:6",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1399,
+                  "src": "1028:23:6",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Project_$1382_memory_ptr",
+                    "typeString": "struct IEnstarV1Project.Project"
+                  },
+                  "typeName": {
+                    "id": 1395,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 1394,
+                      "name": "Project",
+                      "nameLocations": [
+                        "1028:7:6"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 1382,
+                      "src": "1028:7:6"
+                    },
+                    "referencedDeclaration": 1382,
+                    "src": "1028:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Project_$1382_storage_ptr",
+                      "typeString": "struct IEnstarV1Project.Project"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1027:25:6"
+            },
+            "returnParameters": {
+              "id": 1398,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1070:0:6"
+            },
+            "scope": 1466,
+            "src": "1008:63:6",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 1400,
+              "nodeType": "StructuredDocumentation",
+              "src": "1079:47:6",
+              "text": "@notice Get the current balance of project."
+            },
+            "functionSelector": "bb921484",
+            "id": 1405,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "checkProjectBalance",
+            "nameLocation": "1141:19:6",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1401,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1160:2:6"
+            },
+            "returnParameters": {
+              "id": 1404,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1403,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1405,
+                  "src": "1213:7:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1402,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1213:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1212:9:6"
+            },
+            "scope": 1466,
+            "src": "1132:90:6",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 1406,
+              "nodeType": "StructuredDocumentation",
+              "src": "1230:47:6",
+              "text": "@notice Authority of identifying investors."
+            },
+            "functionSelector": "3c7e9485",
+            "id": 1413,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "authorizeInvestor",
+            "nameLocation": "1292:17:6",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1409,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1408,
+                  "mutability": "mutable",
+                  "name": "_address",
+                  "nameLocation": "1318:8:6",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1413,
+                  "src": "1310:16:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1407,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1310:7:6",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1309:18:6"
+            },
+            "returnParameters": {
+              "id": 1412,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1411,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1413,
+                  "src": "1381:4:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1410,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1381:4:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1380:6:6"
+            },
+            "scope": 1466,
+            "src": "1283:104:6",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 1414,
+              "nodeType": "StructuredDocumentation",
+              "src": "1395:47:6",
+              "text": "@notice Investor purchase share of project."
+            },
+            "functionSelector": "c416d075",
+            "id": 1425,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "invest",
+            "nameLocation": "1457:6:6",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1421,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1416,
+                  "mutability": "mutable",
+                  "name": "_investor",
+                  "nameLocation": "1472:9:6",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1425,
+                  "src": "1464:17:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1415,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1464:7:6",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1418,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "1491:6:6",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1425,
+                  "src": "1483:14:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1417,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1483:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1420,
+                  "mutability": "mutable",
+                  "name": "timestamp",
+                  "nameLocation": "1507:9:6",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1425,
+                  "src": "1499:17:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1419,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1499:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1463:54:6"
+            },
+            "returnParameters": {
+              "id": 1424,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1423,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1425,
+                  "src": "1574:4:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1422,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1574:4:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1573:6:6"
+            },
+            "scope": 1466,
+            "src": "1448:132:6",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 1426,
+              "nodeType": "StructuredDocumentation",
+              "src": "1588:29:6",
+              "text": "@notice Investor withdraw"
+            },
+            "functionSelector": "0e070446",
+            "id": 1435,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "investorWithdraw",
+            "nameLocation": "1632:16:6",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1431,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1428,
+                  "mutability": "mutable",
+                  "name": "_erc20Addr",
+                  "nameLocation": "1657:10:6",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1435,
+                  "src": "1649:18:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1427,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1649:7:6",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1430,
+                  "mutability": "mutable",
+                  "name": "_amount",
+                  "nameLocation": "1677:7:6",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1435,
+                  "src": "1669:15:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1429,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1669:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1648:37:6"
+            },
+            "returnParameters": {
+              "id": 1434,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1433,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1435,
+                  "src": "1704:4:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1432,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1704:4:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1703:6:6"
+            },
+            "scope": 1466,
+            "src": "1623:87:6",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 1436,
+              "nodeType": "StructuredDocumentation",
+              "src": "1718:28:6",
+              "text": "@notice project withdraw"
+            },
+            "functionSelector": "610fda86",
+            "id": 1443,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "projectWithdraw",
+            "nameLocation": "1761:15:6",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1439,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1438,
+                  "mutability": "mutable",
+                  "name": "_erc20Addr",
+                  "nameLocation": "1785:10:6",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1443,
+                  "src": "1777:18:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1437,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1777:7:6",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1776:20:6"
+            },
+            "returnParameters": {
+              "id": 1442,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1441,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1443,
+                  "src": "1815:4:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1440,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1815:4:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1814:6:6"
+            },
+            "scope": 1466,
+            "src": "1752:69:6",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "bbc0f22b",
+            "id": 1456,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "transferTest",
+            "nameLocation": "1838:12:6",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1452,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1445,
+                  "mutability": "mutable",
+                  "name": "_contract",
+                  "nameLocation": "1869:9:6",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1456,
+                  "src": "1861:17:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1444,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1861:7:6",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1447,
+                  "mutability": "mutable",
+                  "name": "sender",
+                  "nameLocation": "1897:6:6",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1456,
+                  "src": "1889:14:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1446,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1889:7:6",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1449,
+                  "mutability": "mutable",
+                  "name": "to",
+                  "nameLocation": "1922:2:6",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1456,
+                  "src": "1914:10:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1448,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1914:7:6",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1451,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "1943:6:6",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1456,
+                  "src": "1935:14:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1450,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1935:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1850:106:6"
+            },
+            "returnParameters": {
+              "id": 1455,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1454,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1456,
+                  "src": "1975:4:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1453,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1975:4:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1974:6:6"
+            },
+            "scope": 1466,
+            "src": "1829:152:6",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "d5180978",
+            "id": 1465,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "balanceOfTest",
+            "nameLocation": "1998:13:6",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1461,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1458,
+                  "mutability": "mutable",
+                  "name": "_contract",
+                  "nameLocation": "2030:9:6",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1465,
+                  "src": "2022:17:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1457,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2022:7:6",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1460,
+                  "mutability": "mutable",
+                  "name": "_token",
+                  "nameLocation": "2058:6:6",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1465,
+                  "src": "2050:14:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1459,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2050:7:6",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2011:60:6"
+            },
+            "returnParameters": {
+              "id": 1464,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1463,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1465,
+                  "src": "2095:7:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1462,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2095:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2094:9:6"
+            },
+            "scope": 1466,
+            "src": "1989:115:6",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1467,
+        "src": "390:1726:6",
+        "usedErrors": []
+      }
+    ],
+    "src": "221:1895:6"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.17+commit.8df45f5f.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.11",
+  "updatedAt": "2023-01-12T20:34:12.539Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "title": "The interface for a Enstar project",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "authorizeInvestor(address)": {
+        "notice": "Authority of identifying investors."
+      },
+      "checkProjectBalance()": {
+        "notice": "Get the current balance of project."
+      },
+      "invest(address,uint256,uint256)": {
+        "notice": "Investor purchase share of project."
+      },
+      "investorWithdraw(address,uint256)": {
+        "notice": "Investor withdraw"
+      },
+      "projectWithdraw(address)": {
+        "notice": "project withdraw"
+      },
+      "setProject((string,string,string,uint256,uint256,address,uint256,string,string,string,string,string))": {
+        "notice": "set the project information."
+      }
+    },
+    "notice": "enstar project facilitates investing strictly conform to the ERC20 specification",
+    "version": 1
+  }
+}

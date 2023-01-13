@@ -1,0 +1,1211 @@
+{
+  "contractName": "IEnstarV1ProjectInvestment",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "price",
+          "type": "uint256"
+        }
+      ],
+      "name": "initialize",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "recipient",
+          "type": "address"
+        },
+        {
+          "internalType": "uint128",
+          "name": "amount",
+          "type": "uint128"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "mint",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "amountCP",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amountVC",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "recipient",
+          "type": "address"
+        },
+        {
+          "internalType": "uint128",
+          "name": "amountCPRequested",
+          "type": "uint128"
+        },
+        {
+          "internalType": "uint128",
+          "name": "amountVCRequested",
+          "type": "uint128"
+        }
+      ],
+      "name": "collect",
+      "outputs": [
+        {
+          "internalType": "uint128",
+          "name": "amountCP",
+          "type": "uint128"
+        },
+        {
+          "internalType": "uint128",
+          "name": "amountVC",
+          "type": "uint128"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint128",
+          "name": "amount",
+          "type": "uint128"
+        }
+      ],
+      "name": "burn",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "amountCP",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amountVC",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "recipient",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "swap",
+      "outputs": [
+        {
+          "internalType": "int256",
+          "name": "amountCP",
+          "type": "int256"
+        },
+        {
+          "internalType": "int256",
+          "name": "amountVC",
+          "type": "int256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "recipient",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amountCP",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amountVC",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "flash",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint16",
+          "name": "observationCardinalityNext",
+          "type": "uint16"
+        }
+      ],
+      "name": "increaseObservationCardinalityNext",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint128\",\"name\":\"amount\",\"type\":\"uint128\"}],\"name\":\"burn\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"amountCP\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amountVC\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"internalType\":\"uint128\",\"name\":\"amountCPRequested\",\"type\":\"uint128\"},{\"internalType\":\"uint128\",\"name\":\"amountVCRequested\",\"type\":\"uint128\"}],\"name\":\"collect\",\"outputs\":[{\"internalType\":\"uint128\",\"name\":\"amountCP\",\"type\":\"uint128\"},{\"internalType\":\"uint128\",\"name\":\"amountVC\",\"type\":\"uint128\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amountCP\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amountVC\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"flash\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint16\",\"name\":\"observationCardinalityNext\",\"type\":\"uint16\"}],\"name\":\"increaseObservationCardinalityNext\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"price\",\"type\":\"uint256\"}],\"name\":\"initialize\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"internalType\":\"uint128\",\"name\":\"amount\",\"type\":\"uint128\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"mint\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"amountCP\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amountVC\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"swap\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"amountCP\",\"type\":\"int256\"},{\"internalType\":\"int256\",\"name\":\"amountVC\",\"type\":\"int256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"burn(uint128)\":{\"details\":\"Can be used to trigger a recalculation of fees owed to a position by calling with an amount of 0Fees must be collected separately via a call to #collect\",\"params\":{\"amount\":\"How much liquidity to burn\"},\"returns\":{\"amountCP\":\"The amount of token0 sent to the recipient\",\"amountVC\":\"The amount of token1 sent to the recipient\"}},\"collect(address,uint128,uint128)\":{\"details\":\"Does not recompute fees earned, which must be done either via mint or burn of any amount of liquidity. Collect must be called by the position owner. To withdraw only token0 or only token1, amountCPRequested or amountVCRequested may be set to zero. To withdraw all tokens owed, caller may pass any value greater than the actual tokens owed, e.g. type(uint128).max. Tokens owed may be from accumulated swap fees or burned liquidity.\",\"params\":{\"amountCPRequested\":\"How much token0 should be withdrawn from the fees owed\",\"amountVCRequested\":\"How much token1 should be withdrawn from the fees owed\",\"recipient\":\"The address which should receive the fees collected\"},\"returns\":{\"amountCP\":\"The amount of fees collected in token0\",\"amountVC\":\"The amount of fees collected in token1\"}},\"flash(address,uint256,uint256,bytes)\":{\"details\":\"The caller of this method receives a callback in the form of IUniswapV3FlashCallback#uniswapV3FlashCallbackCan be used to donate underlying tokens pro-rata to currently in-range liquidity providers by calling with 0 amount{0,1} and sending the donation amount(s) from the callback\",\"params\":{\"amountCP\":\"The amount of token0 to send\",\"amountVC\":\"The amount of token1 to send\",\"data\":\"Any data to be passed through to the callback\",\"recipient\":\"The address which will receive the token0 and token1 amounts\"}},\"increaseObservationCardinalityNext(uint16)\":{\"details\":\"This method is no-op if the project already has an observationCardinalityNext greater than or equal to the input observationCardinalityNext.\",\"params\":{\"observationCardinalityNext\":\"The desired minimum number of observations for the project to store\"}},\"initialize(uint256)\":{\"params\":{\"price\":\"the initial price of the project\"}},\"mint(address,uint128,bytes)\":{\"params\":{\"amount\":\"The amount of liquidity to mint\",\"data\":\"Any data that should be passed through to the callback\",\"recipient\":\"The address for which the liquidity will be created\"},\"returns\":{\"amountCP\":\"The amount of token0 that was paid to mint the given amount of liquidity. Matches the value in the callback\",\"amountVC\":\"The amount of token1 that was paid to mint the given amount of liquidity. Matches the value in the callback\"}},\"swap(address,bytes)\":{\"details\":\"The caller of this method receives a callback in the form of IUniswapV3SwapCallback#uniswapV3SwapCallback\",\"params\":{\"data\":\"Any data to be passed through to the callback\",\"recipient\":\"The address to receive the output of the swap value after the swap. If one for zero, the price cannot be greater than this value after the swap\"},\"returns\":{\"amountCP\":\"The delta of the balance of token0 of the project, exact when negative, minimum when positive\",\"amountVC\":\"The delta of the balance of token1 of the project, exact when negative, minimum when positive\"}}},\"title\":\"Permissionless project actions\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"burn(uint128)\":{\"notice\":\"Burn liquidity from the sender and account tokens owed for the liquidity to the position\"},\"collect(address,uint128,uint128)\":{\"notice\":\"Collects tokens owed to a position\"},\"flash(address,uint256,uint256,bytes)\":{\"notice\":\"Receive token0 and/or token1 and pay it back, plus a fee, in the callback\"},\"increaseObservationCardinalityNext(uint16)\":{\"notice\":\"Increase the maximum number of price and liquidity observations that this project will store\"},\"initialize(uint256)\":{\"notice\":\"Sets the initial price for the project\"},\"swap(address,bytes)\":{\"notice\":\"Swap CP\"}},\"notice\":\"Contains project methods that can be called by anyone\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/project/IEnstarV1ProjectInvestment.sol\":\"IEnstarV1ProjectInvestment\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/project/IEnstarV1ProjectInvestment.sol\":{\"keccak256\":\"0xfb860e224623f73dd0d9275ec3f3bee68eedc8e9fe01c22552d642854df35c10\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://1a4ff29027b67ec4a4a0b7d2a3f90e4747c0ef91ae4f0332e08683a0651b2b92\",\"dweb:/ipfs/Qme7yhipaCRSrLzrj36AwpyaQGBd6otkjp7i5Cy1rsmKPs\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: GPL-2.0-or-later\npragma solidity >=0.8.0;\n\n/// @title Permissionless project actions\n/// @notice Contains project methods that can be called by anyone\ninterface IEnstarV1ProjectInvestment {\n    /// @notice Sets the initial price for the project\n    /// @param price the initial price of the project\n    function initialize(uint256 price) external;\n\n    /// @notice Adds liquidity for the given recipient position\n    /// @dev The caller of this method receives a callback in the form of IEnstarV1MintCallback#enstarV1MintCallback\n    /// in which they must pay any tokenCP or tokenVC owed for the liquidity. \n \n    /// @param recipient The address for which the liquidity will be created\n    /// @param amount The amount of liquidity to mint\n    /// @param data Any data that should be passed through to the callback\n    /// @return amountCP The amount of token0 that was paid to mint the given amount of liquidity. Matches the value in the callback\n    /// @return amountVC The amount of token1 that was paid to mint the given amount of liquidity. Matches the value in the callback\n    function mint(\n        address recipient,\n        uint128 amount,\n        bytes calldata data\n    ) external returns (uint256 amountCP, uint256 amountVC);\n\n    /// @notice Collects tokens owed to a position\n    /// @dev Does not recompute fees earned, which must be done either via mint or burn of any amount of liquidity.\n    /// Collect must be called by the position owner. To withdraw only token0 or only token1, amountCPRequested or\n    /// amountVCRequested may be set to zero. To withdraw all tokens owed, caller may pass any value greater than the\n    /// actual tokens owed, e.g. type(uint128).max. Tokens owed may be from accumulated swap fees or burned liquidity.\n    /// @param recipient The address which should receive the fees collected\n    /// @param amountCPRequested How much token0 should be withdrawn from the fees owed\n    /// @param amountVCRequested How much token1 should be withdrawn from the fees owed\n    /// @return amountCP The amount of fees collected in token0\n    /// @return amountVC The amount of fees collected in token1\n    function collect(\n        address recipient,\n        uint128 amountCPRequested,\n        uint128 amountVCRequested\n    ) external returns (uint128 amountCP, uint128 amountVC);\n\n    /// @notice Burn liquidity from the sender and account tokens owed for the liquidity to the position\n    /// @dev Can be used to trigger a recalculation of fees owed to a position by calling with an amount of 0\n    /// @dev Fees must be collected separately via a call to #collect\n    /// @param amount How much liquidity to burn\n    /// @return amountCP The amount of token0 sent to the recipient\n    /// @return amountVC The amount of token1 sent to the recipient\n    function burn(\n        uint128 amount\n    ) external returns (uint256 amountCP, uint256 amountVC);\n\n    /// @notice Swap CP\n    /// @dev The caller of this method receives a callback in the form of IUniswapV3SwapCallback#uniswapV3SwapCallback\n    /// @param recipient The address to receive the output of the swap\n    /// value after the swap. If one for zero, the price cannot be greater than this value after the swap\n    /// @param data Any data to be passed through to the callback\n    /// @return amountCP The delta of the balance of token0 of the project, exact when negative, minimum when positive\n    /// @return amountVC The delta of the balance of token1 of the project, exact when negative, minimum when positive\n    function swap(\n        address recipient,\n        bytes calldata data\n    ) external returns (int256 amountCP, int256 amountVC);\n\n    /// @notice Receive token0 and/or token1 and pay it back, plus a fee, in the callback\n    /// @dev The caller of this method receives a callback in the form of IUniswapV3FlashCallback#uniswapV3FlashCallback\n    /// @dev Can be used to donate underlying tokens pro-rata to currently in-range liquidity providers by calling\n    /// with 0 amount{0,1} and sending the donation amount(s) from the callback\n    /// @param recipient The address which will receive the token0 and token1 amounts\n    /// @param amountCP The amount of token0 to send\n    /// @param amountVC The amount of token1 to send\n    /// @param data Any data to be passed through to the callback\n    function flash(\n        address recipient,\n        uint256 amountCP,\n        uint256 amountVC,\n        bytes calldata data\n    ) external;\n\n    /// @notice Increase the maximum number of price and liquidity observations that this project will store\n    /// @dev This method is no-op if the project already has an observationCardinalityNext greater than or equal to\n    /// the input observationCardinalityNext.\n    /// @param observationCardinalityNext The desired minimum number of observations for the project to store\n    function increaseObservationCardinalityNext(uint16 observationCardinalityNext) external;\n}\n",
+  "sourcePath": "/home/rli07/workspace/evm/enstar/v1-core/contracts/interfaces/project/IEnstarV1ProjectInvestment.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interfaces/project/IEnstarV1ProjectInvestment.sol",
+    "exportedSymbols": {
+      "IEnstarV1ProjectInvestment": [
+        1015
+      ]
+    },
+    "id": 1016,
+    "license": "GPL-2.0-or-later",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 939,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "45:24:11"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IEnstarV1ProjectInvestment",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 940,
+          "nodeType": "StructuredDocumentation",
+          "src": "71:108:11",
+          "text": "@title Permissionless project actions\n @notice Contains project methods that can be called by anyone"
+        },
+        "fullyImplemented": false,
+        "id": 1015,
+        "linearizedBaseContracts": [
+          1015
+        ],
+        "name": "IEnstarV1ProjectInvestment",
+        "nameLocation": "189:26:11",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 941,
+              "nodeType": "StructuredDocumentation",
+              "src": "222:104:11",
+              "text": "@notice Sets the initial price for the project\n @param price the initial price of the project"
+            },
+            "functionSelector": "fe4b84df",
+            "id": 946,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "initialize",
+            "nameLocation": "340:10:11",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 944,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 943,
+                  "mutability": "mutable",
+                  "name": "price",
+                  "nameLocation": "359:5:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 946,
+                  "src": "351:13:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 942,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "351:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "350:15:11"
+            },
+            "returnParameters": {
+              "id": 945,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "374:0:11"
+            },
+            "scope": 1015,
+            "src": "331:44:11",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 947,
+              "nodeType": "StructuredDocumentation",
+              "src": "643:467:11",
+              "text": "@param recipient The address for which the liquidity will be created\n @param amount The amount of liquidity to mint\n @param data Any data that should be passed through to the callback\n @return amountCP The amount of token0 that was paid to mint the given amount of liquidity. Matches the value in the callback\n @return amountVC The amount of token1 that was paid to mint the given amount of liquidity. Matches the value in the callback"
+            },
+            "functionSelector": "92f026ad",
+            "id": 960,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "mint",
+            "nameLocation": "1124:4:11",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 954,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 949,
+                  "mutability": "mutable",
+                  "name": "recipient",
+                  "nameLocation": "1146:9:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 960,
+                  "src": "1138:17:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 948,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1138:7:11",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 951,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "1173:6:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 960,
+                  "src": "1165:14:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  },
+                  "typeName": {
+                    "id": 950,
+                    "name": "uint128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1165:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint128",
+                      "typeString": "uint128"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 953,
+                  "mutability": "mutable",
+                  "name": "data",
+                  "nameLocation": "1204:4:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 960,
+                  "src": "1189:19:11",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 952,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1189:5:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1128:86:11"
+            },
+            "returnParameters": {
+              "id": 959,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 956,
+                  "mutability": "mutable",
+                  "name": "amountCP",
+                  "nameLocation": "1241:8:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 960,
+                  "src": "1233:16:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 955,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1233:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 958,
+                  "mutability": "mutable",
+                  "name": "amountVC",
+                  "nameLocation": "1259:8:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 960,
+                  "src": "1251:16:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 957,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1251:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1232:36:11"
+            },
+            "scope": 1015,
+            "src": "1115:154:11",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 961,
+              "nodeType": "StructuredDocumentation",
+              "src": "1275:895:11",
+              "text": "@notice Collects tokens owed to a position\n @dev Does not recompute fees earned, which must be done either via mint or burn of any amount of liquidity.\n Collect must be called by the position owner. To withdraw only token0 or only token1, amountCPRequested or\n amountVCRequested may be set to zero. To withdraw all tokens owed, caller may pass any value greater than the\n actual tokens owed, e.g. type(uint128).max. Tokens owed may be from accumulated swap fees or burned liquidity.\n @param recipient The address which should receive the fees collected\n @param amountCPRequested How much token0 should be withdrawn from the fees owed\n @param amountVCRequested How much token1 should be withdrawn from the fees owed\n @return amountCP The amount of fees collected in token0\n @return amountVC The amount of fees collected in token1"
+            },
+            "functionSelector": "60d49d53",
+            "id": 974,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "collect",
+            "nameLocation": "2184:7:11",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 968,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 963,
+                  "mutability": "mutable",
+                  "name": "recipient",
+                  "nameLocation": "2209:9:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 974,
+                  "src": "2201:17:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 962,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2201:7:11",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 965,
+                  "mutability": "mutable",
+                  "name": "amountCPRequested",
+                  "nameLocation": "2236:17:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 974,
+                  "src": "2228:25:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  },
+                  "typeName": {
+                    "id": 964,
+                    "name": "uint128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2228:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint128",
+                      "typeString": "uint128"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 967,
+                  "mutability": "mutable",
+                  "name": "amountVCRequested",
+                  "nameLocation": "2271:17:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 974,
+                  "src": "2263:25:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  },
+                  "typeName": {
+                    "id": 966,
+                    "name": "uint128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2263:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint128",
+                      "typeString": "uint128"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2191:103:11"
+            },
+            "returnParameters": {
+              "id": 973,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 970,
+                  "mutability": "mutable",
+                  "name": "amountCP",
+                  "nameLocation": "2321:8:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 974,
+                  "src": "2313:16:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  },
+                  "typeName": {
+                    "id": 969,
+                    "name": "uint128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2313:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint128",
+                      "typeString": "uint128"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 972,
+                  "mutability": "mutable",
+                  "name": "amountVC",
+                  "nameLocation": "2339:8:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 974,
+                  "src": "2331:16:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  },
+                  "typeName": {
+                    "id": 971,
+                    "name": "uint128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2331:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint128",
+                      "typeString": "uint128"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2312:36:11"
+            },
+            "scope": 1015,
+            "src": "2175:174:11",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 975,
+              "nodeType": "StructuredDocumentation",
+              "src": "2355:465:11",
+              "text": "@notice Burn liquidity from the sender and account tokens owed for the liquidity to the position\n @dev Can be used to trigger a recalculation of fees owed to a position by calling with an amount of 0\n @dev Fees must be collected separately via a call to #collect\n @param amount How much liquidity to burn\n @return amountCP The amount of token0 sent to the recipient\n @return amountVC The amount of token1 sent to the recipient"
+            },
+            "functionSelector": "90bc1693",
+            "id": 984,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "burn",
+            "nameLocation": "2834:4:11",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 978,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 977,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "2856:6:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 984,
+                  "src": "2848:14:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  },
+                  "typeName": {
+                    "id": 976,
+                    "name": "uint128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2848:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint128",
+                      "typeString": "uint128"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2838:30:11"
+            },
+            "returnParameters": {
+              "id": 983,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 980,
+                  "mutability": "mutable",
+                  "name": "amountCP",
+                  "nameLocation": "2895:8:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 984,
+                  "src": "2887:16:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 979,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2887:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 982,
+                  "mutability": "mutable",
+                  "name": "amountVC",
+                  "nameLocation": "2913:8:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 984,
+                  "src": "2905:16:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 981,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2905:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2886:36:11"
+            },
+            "scope": 1015,
+            "src": "2825:98:11",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 985,
+              "nodeType": "StructuredDocumentation",
+              "src": "2929:619:11",
+              "text": "@notice Swap CP\n @dev The caller of this method receives a callback in the form of IUniswapV3SwapCallback#uniswapV3SwapCallback\n @param recipient The address to receive the output of the swap\n value after the swap. If one for zero, the price cannot be greater than this value after the swap\n @param data Any data to be passed through to the callback\n @return amountCP The delta of the balance of token0 of the project, exact when negative, minimum when positive\n @return amountVC The delta of the balance of token1 of the project, exact when negative, minimum when positive"
+            },
+            "functionSelector": "e3547335",
+            "id": 996,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "swap",
+            "nameLocation": "3562:4:11",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 990,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 987,
+                  "mutability": "mutable",
+                  "name": "recipient",
+                  "nameLocation": "3584:9:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 996,
+                  "src": "3576:17:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 986,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3576:7:11",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 989,
+                  "mutability": "mutable",
+                  "name": "data",
+                  "nameLocation": "3618:4:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 996,
+                  "src": "3603:19:11",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 988,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3603:5:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3566:62:11"
+            },
+            "returnParameters": {
+              "id": 995,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 992,
+                  "mutability": "mutable",
+                  "name": "amountCP",
+                  "nameLocation": "3654:8:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 996,
+                  "src": "3647:15:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  },
+                  "typeName": {
+                    "id": 991,
+                    "name": "int256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3647:6:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 994,
+                  "mutability": "mutable",
+                  "name": "amountVC",
+                  "nameLocation": "3671:8:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 996,
+                  "src": "3664:15:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  },
+                  "typeName": {
+                    "id": 993,
+                    "name": "int256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3664:6:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3646:34:11"
+            },
+            "scope": 1015,
+            "src": "3553:128:11",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 997,
+              "nodeType": "StructuredDocumentation",
+              "src": "3687:659:11",
+              "text": "@notice Receive token0 and/or token1 and pay it back, plus a fee, in the callback\n @dev The caller of this method receives a callback in the form of IUniswapV3FlashCallback#uniswapV3FlashCallback\n @dev Can be used to donate underlying tokens pro-rata to currently in-range liquidity providers by calling\n with 0 amount{0,1} and sending the donation amount(s) from the callback\n @param recipient The address which will receive the token0 and token1 amounts\n @param amountCP The amount of token0 to send\n @param amountVC The amount of token1 to send\n @param data Any data to be passed through to the callback"
+            },
+            "functionSelector": "490e6cbc",
+            "id": 1008,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "flash",
+            "nameLocation": "4360:5:11",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1006,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 999,
+                  "mutability": "mutable",
+                  "name": "recipient",
+                  "nameLocation": "4383:9:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1008,
+                  "src": "4375:17:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 998,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4375:7:11",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1001,
+                  "mutability": "mutable",
+                  "name": "amountCP",
+                  "nameLocation": "4410:8:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1008,
+                  "src": "4402:16:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1000,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4402:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1003,
+                  "mutability": "mutable",
+                  "name": "amountVC",
+                  "nameLocation": "4436:8:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1008,
+                  "src": "4428:16:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1002,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4428:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1005,
+                  "mutability": "mutable",
+                  "name": "data",
+                  "nameLocation": "4469:4:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1008,
+                  "src": "4454:19:11",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 1004,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4454:5:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4365:114:11"
+            },
+            "returnParameters": {
+              "id": 1007,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4488:0:11"
+            },
+            "scope": 1015,
+            "src": "4351:138:11",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 1009,
+              "nodeType": "StructuredDocumentation",
+              "src": "4495:376:11",
+              "text": "@notice Increase the maximum number of price and liquidity observations that this project will store\n @dev This method is no-op if the project already has an observationCardinalityNext greater than or equal to\n the input observationCardinalityNext.\n @param observationCardinalityNext The desired minimum number of observations for the project to store"
+            },
+            "functionSelector": "32148f67",
+            "id": 1014,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "increaseObservationCardinalityNext",
+            "nameLocation": "4885:34:11",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1012,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1011,
+                  "mutability": "mutable",
+                  "name": "observationCardinalityNext",
+                  "nameLocation": "4927:26:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1014,
+                  "src": "4920:33:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  },
+                  "typeName": {
+                    "id": 1010,
+                    "name": "uint16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4920:6:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4919:35:11"
+            },
+            "returnParameters": {
+              "id": 1013,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4963:0:11"
+            },
+            "scope": 1015,
+            "src": "4876:88:11",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1016,
+        "src": "179:4787:11",
+        "usedErrors": []
+      }
+    ],
+    "src": "45:4922:11"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.17+commit.8df45f5f.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.11",
+  "updatedAt": "2022-12-16T16:04:08.846Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "burn(uint128)": {
+        "details": "Can be used to trigger a recalculation of fees owed to a position by calling with an amount of 0Fees must be collected separately via a call to #collect",
+        "params": {
+          "amount": "How much liquidity to burn"
+        },
+        "returns": {
+          "amountCP": "The amount of token0 sent to the recipient",
+          "amountVC": "The amount of token1 sent to the recipient"
+        }
+      },
+      "collect(address,uint128,uint128)": {
+        "details": "Does not recompute fees earned, which must be done either via mint or burn of any amount of liquidity. Collect must be called by the position owner. To withdraw only token0 or only token1, amountCPRequested or amountVCRequested may be set to zero. To withdraw all tokens owed, caller may pass any value greater than the actual tokens owed, e.g. type(uint128).max. Tokens owed may be from accumulated swap fees or burned liquidity.",
+        "params": {
+          "amountCPRequested": "How much token0 should be withdrawn from the fees owed",
+          "amountVCRequested": "How much token1 should be withdrawn from the fees owed",
+          "recipient": "The address which should receive the fees collected"
+        },
+        "returns": {
+          "amountCP": "The amount of fees collected in token0",
+          "amountVC": "The amount of fees collected in token1"
+        }
+      },
+      "flash(address,uint256,uint256,bytes)": {
+        "details": "The caller of this method receives a callback in the form of IUniswapV3FlashCallback#uniswapV3FlashCallbackCan be used to donate underlying tokens pro-rata to currently in-range liquidity providers by calling with 0 amount{0,1} and sending the donation amount(s) from the callback",
+        "params": {
+          "amountCP": "The amount of token0 to send",
+          "amountVC": "The amount of token1 to send",
+          "data": "Any data to be passed through to the callback",
+          "recipient": "The address which will receive the token0 and token1 amounts"
+        }
+      },
+      "increaseObservationCardinalityNext(uint16)": {
+        "details": "This method is no-op if the project already has an observationCardinalityNext greater than or equal to the input observationCardinalityNext.",
+        "params": {
+          "observationCardinalityNext": "The desired minimum number of observations for the project to store"
+        }
+      },
+      "initialize(uint256)": {
+        "params": {
+          "price": "the initial price of the project"
+        }
+      },
+      "mint(address,uint128,bytes)": {
+        "params": {
+          "amount": "The amount of liquidity to mint",
+          "data": "Any data that should be passed through to the callback",
+          "recipient": "The address for which the liquidity will be created"
+        },
+        "returns": {
+          "amountCP": "The amount of token0 that was paid to mint the given amount of liquidity. Matches the value in the callback",
+          "amountVC": "The amount of token1 that was paid to mint the given amount of liquidity. Matches the value in the callback"
+        }
+      },
+      "swap(address,bytes)": {
+        "details": "The caller of this method receives a callback in the form of IUniswapV3SwapCallback#uniswapV3SwapCallback",
+        "params": {
+          "data": "Any data to be passed through to the callback",
+          "recipient": "The address to receive the output of the swap value after the swap. If one for zero, the price cannot be greater than this value after the swap"
+        },
+        "returns": {
+          "amountCP": "The delta of the balance of token0 of the project, exact when negative, minimum when positive",
+          "amountVC": "The delta of the balance of token1 of the project, exact when negative, minimum when positive"
+        }
+      }
+    },
+    "title": "Permissionless project actions",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "burn(uint128)": {
+        "notice": "Burn liquidity from the sender and account tokens owed for the liquidity to the position"
+      },
+      "collect(address,uint128,uint128)": {
+        "notice": "Collects tokens owed to a position"
+      },
+      "flash(address,uint256,uint256,bytes)": {
+        "notice": "Receive token0 and/or token1 and pay it back, plus a fee, in the callback"
+      },
+      "increaseObservationCardinalityNext(uint16)": {
+        "notice": "Increase the maximum number of price and liquidity observations that this project will store"
+      },
+      "initialize(uint256)": {
+        "notice": "Sets the initial price for the project"
+      },
+      "swap(address,bytes)": {
+        "notice": "Swap CP"
+      }
+    },
+    "notice": "Contains project methods that can be called by anyone",
+    "version": 1
+  }
+}

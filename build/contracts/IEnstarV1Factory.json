@@ -1,0 +1,1195 @@
+{
+  "contractName": "IEnstarV1Factory",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint24",
+          "name": "fee",
+          "type": "uint24"
+        }
+      ],
+      "name": "FeeAmountEnabled",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "oldOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnerChanged",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "tokenCP",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "tokenVC",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint24",
+          "name": "fee",
+          "type": "uint24"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "project",
+          "type": "address"
+        }
+      ],
+      "name": "ProjectCreated",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint24",
+          "name": "fee",
+          "type": "uint24"
+        }
+      ],
+      "name": "feeAmount",
+      "outputs": [
+        {
+          "internalType": "int24",
+          "name": "",
+          "type": "int24"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "tokenCP",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "tokenVC",
+          "type": "address"
+        },
+        {
+          "internalType": "uint24",
+          "name": "fee",
+          "type": "uint24"
+        }
+      ],
+      "name": "getProject",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "project",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "tokenCP",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "tokenVC",
+          "type": "address"
+        },
+        {
+          "internalType": "uint24",
+          "name": "fee",
+          "type": "uint24"
+        }
+      ],
+      "name": "createProject",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "project",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "name": "setOwner",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint24",
+          "name": "fee",
+          "type": "uint24"
+        }
+      ],
+      "name": "enableFeeAmount",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint24\",\"name\":\"fee\",\"type\":\"uint24\"}],\"name\":\"FeeAmountEnabled\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"oldOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnerChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"tokenCP\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"tokenVC\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint24\",\"name\":\"fee\",\"type\":\"uint24\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"project\",\"type\":\"address\"}],\"name\":\"ProjectCreated\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"tokenCP\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"tokenVC\",\"type\":\"address\"},{\"internalType\":\"uint24\",\"name\":\"fee\",\"type\":\"uint24\"}],\"name\":\"createProject\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"project\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint24\",\"name\":\"fee\",\"type\":\"uint24\"}],\"name\":\"enableFeeAmount\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint24\",\"name\":\"fee\",\"type\":\"uint24\"}],\"name\":\"feeAmount\",\"outputs\":[{\"internalType\":\"int24\",\"name\":\"\",\"type\":\"int24\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"tokenCP\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"tokenVC\",\"type\":\"address\"},{\"internalType\":\"uint24\",\"name\":\"fee\",\"type\":\"uint24\"}],\"name\":\"getProject\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"project\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_owner\",\"type\":\"address\"}],\"name\":\"setOwner\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"events\":{\"FeeAmountEnabled(uint24)\":{\"params\":{\"fee\":\"The enabled fee, denominated in hundredths of a bip\"}},\"OwnerChanged(address,address)\":{\"params\":{\"newOwner\":\"The owner after the owner was changed\",\"oldOwner\":\"The owner before the owner was changed\"}},\"ProjectCreated(address,address,uint24,address)\":{\"params\":{\"fee\":\"The fee collected upon every swap in the project, denominated in hundredths of a bip\",\"project\":\"The address of the created project\",\"tokenCP\":\"The first token of the project by address sort order\",\"tokenVC\":\"The second token of the project by address sort order\"}}},\"kind\":\"dev\",\"methods\":{\"createProject(address,address,uint24)\":{\"details\":\"tokenCP and tokenVC may be passed in either order: tokenCP/tokenVC or tokenVC/tokenCP. tickSpacing is retrieved from the fee. The call will revert if the project already exists, the fee is invalid, or the token arguments are invalid.\",\"params\":{\"fee\":\"The desired fee for the project\",\"tokenCP\":\"One of the two tokens in the desired project\",\"tokenVC\":\"The other of the two tokens in the desired project\"},\"returns\":{\"project\":\"The address of the newly created project\"}},\"enableFeeAmount(uint24)\":{\"details\":\"Fee amounts may never be removed once enabled\",\"params\":{\"fee\":\"The fee amount to enable, denominated in hundredths of a bip (i.e. 1e-6)\"}},\"feeAmount(uint24)\":{\"details\":\"A fee amount can never be removed, so this value should be hard coded or cached in the calling context\",\"params\":{\"fee\":\"The enabled fee, denominated in hundredths of a bip. Returns 0 in case of unenabled fee\"}},\"getProject(address,address,uint24)\":{\"details\":\"tokenCP and tokenVC may be passed in either tokenCP/tokenVC or tokenVC/tokenCP order\",\"params\":{\"fee\":\"The fee collected upon every swap in the project, denominated in hundredths of a bip\",\"tokenCP\":\"The contract address of either tokenCP or tokenVC\",\"tokenVC\":\"The contract address of the other token\"},\"returns\":{\"project\":\"The project address\"}},\"owner()\":{\"details\":\"Can be changed by the current owner via setOwner\",\"returns\":{\"_0\":\"The address of the factory owner\"}},\"setOwner(address)\":{\"details\":\"Must be called by the current owner\",\"params\":{\"_owner\":\"The new owner of the factory\"}}},\"title\":\"The interface for the project factory\",\"version\":1},\"userdoc\":{\"events\":{\"FeeAmountEnabled(uint24)\":{\"notice\":\"Emitted when a new fee amount is enabled for project creation via the factory\"},\"OwnerChanged(address,address)\":{\"notice\":\"Emitted when the owner of the factory is changed\"},\"ProjectCreated(address,address,uint24,address)\":{\"notice\":\"Emitted when a project is created\"}},\"kind\":\"user\",\"methods\":{\"createProject(address,address,uint24)\":{\"notice\":\"Creates a project for the given two tokens and fee\"},\"enableFeeAmount(uint24)\":{\"notice\":\"Enables a fee amount with the given tickSpacing\"},\"feeAmount(uint24)\":{\"notice\":\"Returns a given fee amount, if enabled, or 0 if not enabled\"},\"getProject(address,address,uint24)\":{\"notice\":\"Returns the project address for a given pair of tokens and a fee, or address 0 if it does not exist\"},\"owner()\":{\"notice\":\"Returns the current owner of the factory\"},\"setOwner(address)\":{\"notice\":\"Updates the owner of the factory\"}},\"notice\":\"The project Factory facilitates creation of projects and control over the protocol fees\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/IEnstarV1Factory.sol\":\"IEnstarV1Factory\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/IEnstarV1Factory.sol\":{\"keccak256\":\"0x15c651a5663a92e56ceb351b3c31241989a664b18438dc1c8702b2efe04f221e\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://1ff320e504cac08ecd6ac1e7a39f7a7cb547460df655ecb53179a14bb3ad49af\",\"dweb:/ipfs/QmSduoJJ1fedipcEJ2froMe4woVbmez4yQEUjmCgYT7MjD\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: GPL-2.0-or-later\npragma solidity >=0.8.0;\n\n/// @title The interface for the project factory\n/// @notice The project Factory facilitates creation of projects and control over the protocol fees\ninterface IEnstarV1Factory {\n    /// @notice Emitted when the owner of the factory is changed\n    /// @param oldOwner The owner before the owner was changed\n    /// @param newOwner The owner after the owner was changed\n    event OwnerChanged(address indexed oldOwner, address indexed newOwner);\n\n    /// @notice Emitted when a project is created\n    /// @param tokenCP The first token of the project by address sort order\n    /// @param tokenVC The second token of the project by address sort order\n    /// @param fee The fee collected upon every swap in the project, denominated in hundredths of a bip\n    /// @param project The address of the created project\n    event ProjectCreated(\n        address indexed tokenCP,\n        address indexed tokenVC,\n        uint24 indexed fee,\n        address project\n    );\n\n    /// @notice Emitted when a new fee amount is enabled for project creation via the factory\n    /// @param fee The enabled fee, denominated in hundredths of a bip\n    event FeeAmountEnabled(uint24 indexed fee);\n\n    /// @notice Returns the current owner of the factory\n    /// @dev Can be changed by the current owner via setOwner\n    /// @return The address of the factory owner\n    function owner() external view returns (address);\n\n    /// @notice Returns a given fee amount, if enabled, or 0 if not enabled\n    /// @dev A fee amount can never be removed, so this value should be hard coded or cached in the calling context\n    /// @param fee The enabled fee, denominated in hundredths of a bip. Returns 0 in case of unenabled fee\n    function feeAmount(uint24 fee) external view returns (int24);\n\n    /// @notice Returns the project address for a given pair of tokens and a fee, or address 0 if it does not exist\n    /// @dev tokenCP and tokenVC may be passed in either tokenCP/tokenVC or tokenVC/tokenCP order\n    /// @param tokenCP The contract address of either tokenCP or tokenVC\n    /// @param tokenVC The contract address of the other token\n    /// @param fee The fee collected upon every swap in the project, denominated in hundredths of a bip\n    /// @return project The project address\n    function getProject(\n        address tokenCP,\n        address tokenVC,\n        uint24 fee\n    ) external view returns (address project);\n\n    /// @notice Creates a project for the given two tokens and fee\n    /// @param tokenCP One of the two tokens in the desired project\n    /// @param tokenVC The other of the two tokens in the desired project\n    /// @param fee The desired fee for the project\n    /// @dev tokenCP and tokenVC may be passed in either order: tokenCP/tokenVC or tokenVC/tokenCP. tickSpacing is retrieved\n    /// from the fee. The call will revert if the project already exists, the fee is invalid, or the token arguments\n    /// are invalid.\n    /// @return project The address of the newly created project\n    function createProject(\n        address tokenCP,\n        address tokenVC,\n        uint24 fee\n    ) external returns (address project);\n\n    /// @notice Updates the owner of the factory\n    /// @dev Must be called by the current owner\n    /// @param _owner The new owner of the factory\n    function setOwner(address _owner) external;\n\n    /// @notice Enables a fee amount with the given tickSpacing\n    /// @dev Fee amounts may never be removed once enabled\n    /// @param fee The fee amount to enable, denominated in hundredths of a bip (i.e. 1e-6)\n    function enableFeeAmount(uint24 fee) external;\n}\n",
+  "sourcePath": "/home/rli07/workspace/evm/enstar/v1-core/contracts/interfaces/IEnstarV1Factory.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interfaces/IEnstarV1Factory.sol",
+    "exportedSymbols": {
+      "IEnstarV1Factory": [
+        742
+      ]
+    },
+    "id": 743,
+    "license": "GPL-2.0-or-later",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 667,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "45:24:5"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IEnstarV1Factory",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 668,
+          "nodeType": "StructuredDocumentation",
+          "src": "71:149:5",
+          "text": "@title The interface for the project factory\n @notice The project Factory facilitates creation of projects and control over the protocol fees"
+        },
+        "fullyImplemented": false,
+        "id": 742,
+        "linearizedBaseContracts": [
+          742
+        ],
+        "name": "IEnstarV1Factory",
+        "nameLocation": "230:16:5",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": {
+              "id": 669,
+              "nodeType": "StructuredDocumentation",
+              "src": "253:185:5",
+              "text": "@notice Emitted when the owner of the factory is changed\n @param oldOwner The owner before the owner was changed\n @param newOwner The owner after the owner was changed"
+            },
+            "eventSelector": "b532073b38c83145e3e5135377a08bf9aab55bc0fd7c1179cd4fb995d2a5159c",
+            "id": 675,
+            "name": "OwnerChanged",
+            "nameLocation": "449:12:5",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 674,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 671,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "oldOwner",
+                  "nameLocation": "478:8:5",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 675,
+                  "src": "462:24:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 670,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "462:7:5",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 673,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "newOwner",
+                  "nameLocation": "504:8:5",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 675,
+                  "src": "488:24:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 672,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "488:7:5",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "461:52:5"
+            },
+            "src": "443:71:5"
+          },
+          {
+            "anonymous": false,
+            "documentation": {
+              "id": 676,
+              "nodeType": "StructuredDocumentation",
+              "src": "520:360:5",
+              "text": "@notice Emitted when a project is created\n @param tokenCP The first token of the project by address sort order\n @param tokenVC The second token of the project by address sort order\n @param fee The fee collected upon every swap in the project, denominated in hundredths of a bip\n @param project The address of the created project"
+            },
+            "eventSelector": "6a4180f541819a54420099b3e6a923c7188f71fdef4b292d988af9e8aeacd84f",
+            "id": 686,
+            "name": "ProjectCreated",
+            "nameLocation": "891:14:5",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 685,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 678,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "tokenCP",
+                  "nameLocation": "931:7:5",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 686,
+                  "src": "915:23:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 677,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "915:7:5",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 680,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "tokenVC",
+                  "nameLocation": "964:7:5",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 686,
+                  "src": "948:23:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 679,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "948:7:5",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 682,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "fee",
+                  "nameLocation": "996:3:5",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 686,
+                  "src": "981:18:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint24",
+                    "typeString": "uint24"
+                  },
+                  "typeName": {
+                    "id": 681,
+                    "name": "uint24",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "981:6:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint24",
+                      "typeString": "uint24"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 684,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "project",
+                  "nameLocation": "1017:7:5",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 686,
+                  "src": "1009:15:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 683,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1009:7:5",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "905:125:5"
+            },
+            "src": "885:146:5"
+          },
+          {
+            "anonymous": false,
+            "documentation": {
+              "id": 687,
+              "nodeType": "StructuredDocumentation",
+              "src": "1037:160:5",
+              "text": "@notice Emitted when a new fee amount is enabled for project creation via the factory\n @param fee The enabled fee, denominated in hundredths of a bip"
+            },
+            "eventSelector": "1f17e6f377d5868060fb453803126244f4e60e4c862eaa32ee28a9fac946ba88",
+            "id": 691,
+            "name": "FeeAmountEnabled",
+            "nameLocation": "1208:16:5",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 690,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 689,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "fee",
+                  "nameLocation": "1240:3:5",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 691,
+                  "src": "1225:18:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint24",
+                    "typeString": "uint24"
+                  },
+                  "typeName": {
+                    "id": 688,
+                    "name": "uint24",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1225:6:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint24",
+                      "typeString": "uint24"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1224:20:5"
+            },
+            "src": "1202:43:5"
+          },
+          {
+            "documentation": {
+              "id": 692,
+              "nodeType": "StructuredDocumentation",
+              "src": "1251:163:5",
+              "text": "@notice Returns the current owner of the factory\n @dev Can be changed by the current owner via setOwner\n @return The address of the factory owner"
+            },
+            "functionSelector": "8da5cb5b",
+            "id": 697,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "owner",
+            "nameLocation": "1428:5:5",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 693,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1433:2:5"
+            },
+            "returnParameters": {
+              "id": 696,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 695,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 697,
+                  "src": "1459:7:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 694,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1459:7:5",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1458:9:5"
+            },
+            "scope": 742,
+            "src": "1419:49:5",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 698,
+              "nodeType": "StructuredDocumentation",
+              "src": "1474:294:5",
+              "text": "@notice Returns a given fee amount, if enabled, or 0 if not enabled\n @dev A fee amount can never be removed, so this value should be hard coded or cached in the calling context\n @param fee The enabled fee, denominated in hundredths of a bip. Returns 0 in case of unenabled fee"
+            },
+            "functionSelector": "fb175b23",
+            "id": 705,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "feeAmount",
+            "nameLocation": "1782:9:5",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 701,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 700,
+                  "mutability": "mutable",
+                  "name": "fee",
+                  "nameLocation": "1799:3:5",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 705,
+                  "src": "1792:10:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint24",
+                    "typeString": "uint24"
+                  },
+                  "typeName": {
+                    "id": 699,
+                    "name": "uint24",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1792:6:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint24",
+                      "typeString": "uint24"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1791:12:5"
+            },
+            "returnParameters": {
+              "id": 704,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 703,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 705,
+                  "src": "1827:5:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int24",
+                    "typeString": "int24"
+                  },
+                  "typeName": {
+                    "id": 702,
+                    "name": "int24",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1827:5:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int24",
+                      "typeString": "int24"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1826:7:5"
+            },
+            "scope": 742,
+            "src": "1773:61:5",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 706,
+              "nodeType": "StructuredDocumentation",
+              "src": "1840:493:5",
+              "text": "@notice Returns the project address for a given pair of tokens and a fee, or address 0 if it does not exist\n @dev tokenCP and tokenVC may be passed in either tokenCP/tokenVC or tokenVC/tokenCP order\n @param tokenCP The contract address of either tokenCP or tokenVC\n @param tokenVC The contract address of the other token\n @param fee The fee collected upon every swap in the project, denominated in hundredths of a bip\n @return project The project address"
+            },
+            "functionSelector": "c91179e9",
+            "id": 717,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getProject",
+            "nameLocation": "2347:10:5",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 713,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 708,
+                  "mutability": "mutable",
+                  "name": "tokenCP",
+                  "nameLocation": "2375:7:5",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 717,
+                  "src": "2367:15:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 707,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2367:7:5",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 710,
+                  "mutability": "mutable",
+                  "name": "tokenVC",
+                  "nameLocation": "2400:7:5",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 717,
+                  "src": "2392:15:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 709,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2392:7:5",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 712,
+                  "mutability": "mutable",
+                  "name": "fee",
+                  "nameLocation": "2424:3:5",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 717,
+                  "src": "2417:10:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint24",
+                    "typeString": "uint24"
+                  },
+                  "typeName": {
+                    "id": 711,
+                    "name": "uint24",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2417:6:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint24",
+                      "typeString": "uint24"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2357:76:5"
+            },
+            "returnParameters": {
+              "id": 716,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 715,
+                  "mutability": "mutable",
+                  "name": "project",
+                  "nameLocation": "2465:7:5",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 717,
+                  "src": "2457:15:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 714,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2457:7:5",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2456:17:5"
+            },
+            "scope": 742,
+            "src": "2338:136:5",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 718,
+              "nodeType": "StructuredDocumentation",
+              "src": "2480:583:5",
+              "text": "@notice Creates a project for the given two tokens and fee\n @param tokenCP One of the two tokens in the desired project\n @param tokenVC The other of the two tokens in the desired project\n @param fee The desired fee for the project\n @dev tokenCP and tokenVC may be passed in either order: tokenCP/tokenVC or tokenVC/tokenCP. tickSpacing is retrieved\n from the fee. The call will revert if the project already exists, the fee is invalid, or the token arguments\n are invalid.\n @return project The address of the newly created project"
+            },
+            "functionSelector": "25158e39",
+            "id": 729,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "createProject",
+            "nameLocation": "3077:13:5",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 725,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 720,
+                  "mutability": "mutable",
+                  "name": "tokenCP",
+                  "nameLocation": "3108:7:5",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 729,
+                  "src": "3100:15:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 719,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3100:7:5",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 722,
+                  "mutability": "mutable",
+                  "name": "tokenVC",
+                  "nameLocation": "3133:7:5",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 729,
+                  "src": "3125:15:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 721,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3125:7:5",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 724,
+                  "mutability": "mutable",
+                  "name": "fee",
+                  "nameLocation": "3157:3:5",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 729,
+                  "src": "3150:10:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint24",
+                    "typeString": "uint24"
+                  },
+                  "typeName": {
+                    "id": 723,
+                    "name": "uint24",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3150:6:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint24",
+                      "typeString": "uint24"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3090:76:5"
+            },
+            "returnParameters": {
+              "id": 728,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 727,
+                  "mutability": "mutable",
+                  "name": "project",
+                  "nameLocation": "3193:7:5",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 729,
+                  "src": "3185:15:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 726,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3185:7:5",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3184:17:5"
+            },
+            "scope": 742,
+            "src": "3068:134:5",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 730,
+              "nodeType": "StructuredDocumentation",
+              "src": "3208:144:5",
+              "text": "@notice Updates the owner of the factory\n @dev Must be called by the current owner\n @param _owner The new owner of the factory"
+            },
+            "functionSelector": "13af4035",
+            "id": 735,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setOwner",
+            "nameLocation": "3366:8:5",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 733,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 732,
+                  "mutability": "mutable",
+                  "name": "_owner",
+                  "nameLocation": "3383:6:5",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 735,
+                  "src": "3375:14:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 731,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3375:7:5",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3374:16:5"
+            },
+            "returnParameters": {
+              "id": 734,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3399:0:5"
+            },
+            "scope": 742,
+            "src": "3357:43:5",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 736,
+              "nodeType": "StructuredDocumentation",
+              "src": "3406:210:5",
+              "text": "@notice Enables a fee amount with the given tickSpacing\n @dev Fee amounts may never be removed once enabled\n @param fee The fee amount to enable, denominated in hundredths of a bip (i.e. 1e-6)"
+            },
+            "functionSelector": "bcb928ec",
+            "id": 741,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "enableFeeAmount",
+            "nameLocation": "3630:15:5",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 739,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 738,
+                  "mutability": "mutable",
+                  "name": "fee",
+                  "nameLocation": "3653:3:5",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 741,
+                  "src": "3646:10:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint24",
+                    "typeString": "uint24"
+                  },
+                  "typeName": {
+                    "id": 737,
+                    "name": "uint24",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3646:6:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint24",
+                      "typeString": "uint24"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3645:12:5"
+            },
+            "returnParameters": {
+              "id": 740,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3666:0:5"
+            },
+            "scope": 742,
+            "src": "3621:46:5",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 743,
+        "src": "220:3449:5",
+        "usedErrors": []
+      }
+    ],
+    "src": "45:3625:5"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.17+commit.8df45f5f.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.11",
+  "updatedAt": "2022-12-16T16:04:08.833Z",
+  "devdoc": {
+    "events": {
+      "FeeAmountEnabled(uint24)": {
+        "params": {
+          "fee": "The enabled fee, denominated in hundredths of a bip"
+        }
+      },
+      "OwnerChanged(address,address)": {
+        "params": {
+          "newOwner": "The owner after the owner was changed",
+          "oldOwner": "The owner before the owner was changed"
+        }
+      },
+      "ProjectCreated(address,address,uint24,address)": {
+        "params": {
+          "fee": "The fee collected upon every swap in the project, denominated in hundredths of a bip",
+          "project": "The address of the created project",
+          "tokenCP": "The first token of the project by address sort order",
+          "tokenVC": "The second token of the project by address sort order"
+        }
+      }
+    },
+    "kind": "dev",
+    "methods": {
+      "createProject(address,address,uint24)": {
+        "details": "tokenCP and tokenVC may be passed in either order: tokenCP/tokenVC or tokenVC/tokenCP. tickSpacing is retrieved from the fee. The call will revert if the project already exists, the fee is invalid, or the token arguments are invalid.",
+        "params": {
+          "fee": "The desired fee for the project",
+          "tokenCP": "One of the two tokens in the desired project",
+          "tokenVC": "The other of the two tokens in the desired project"
+        },
+        "returns": {
+          "project": "The address of the newly created project"
+        }
+      },
+      "enableFeeAmount(uint24)": {
+        "details": "Fee amounts may never be removed once enabled",
+        "params": {
+          "fee": "The fee amount to enable, denominated in hundredths of a bip (i.e. 1e-6)"
+        }
+      },
+      "feeAmount(uint24)": {
+        "details": "A fee amount can never be removed, so this value should be hard coded or cached in the calling context",
+        "params": {
+          "fee": "The enabled fee, denominated in hundredths of a bip. Returns 0 in case of unenabled fee"
+        }
+      },
+      "getProject(address,address,uint24)": {
+        "details": "tokenCP and tokenVC may be passed in either tokenCP/tokenVC or tokenVC/tokenCP order",
+        "params": {
+          "fee": "The fee collected upon every swap in the project, denominated in hundredths of a bip",
+          "tokenCP": "The contract address of either tokenCP or tokenVC",
+          "tokenVC": "The contract address of the other token"
+        },
+        "returns": {
+          "project": "The project address"
+        }
+      },
+      "owner()": {
+        "details": "Can be changed by the current owner via setOwner",
+        "returns": {
+          "_0": "The address of the factory owner"
+        }
+      },
+      "setOwner(address)": {
+        "details": "Must be called by the current owner",
+        "params": {
+          "_owner": "The new owner of the factory"
+        }
+      }
+    },
+    "title": "The interface for the project factory",
+    "version": 1
+  },
+  "userdoc": {
+    "events": {
+      "FeeAmountEnabled(uint24)": {
+        "notice": "Emitted when a new fee amount is enabled for project creation via the factory"
+      },
+      "OwnerChanged(address,address)": {
+        "notice": "Emitted when the owner of the factory is changed"
+      },
+      "ProjectCreated(address,address,uint24,address)": {
+        "notice": "Emitted when a project is created"
+      }
+    },
+    "kind": "user",
+    "methods": {
+      "createProject(address,address,uint24)": {
+        "notice": "Creates a project for the given two tokens and fee"
+      },
+      "enableFeeAmount(uint24)": {
+        "notice": "Enables a fee amount with the given tickSpacing"
+      },
+      "feeAmount(uint24)": {
+        "notice": "Returns a given fee amount, if enabled, or 0 if not enabled"
+      },
+      "getProject(address,address,uint24)": {
+        "notice": "Returns the project address for a given pair of tokens and a fee, or address 0 if it does not exist"
+      },
+      "owner()": {
+        "notice": "Returns the current owner of the factory"
+      },
+      "setOwner(address)": {
+        "notice": "Updates the owner of the factory"
+      }
+    },
+    "notice": "The project Factory facilitates creation of projects and control over the protocol fees",
+    "version": 1
+  }
+}

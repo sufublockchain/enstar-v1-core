@@ -1,0 +1,736 @@
+{
+  "contractName": "IEnstarV1ProjectState",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "slot0",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "currentPrice",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint16",
+          "name": "observationIndex",
+          "type": "uint16"
+        },
+        {
+          "internalType": "uint16",
+          "name": "observationCardinality",
+          "type": "uint16"
+        },
+        {
+          "internalType": "uint16",
+          "name": "observationCardinalityNext",
+          "type": "uint16"
+        },
+        {
+          "internalType": "bool",
+          "name": "unlocked",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "protocolFees",
+      "outputs": [
+        {
+          "internalType": "uint128",
+          "name": "tokenCP",
+          "type": "uint128"
+        },
+        {
+          "internalType": "uint128",
+          "name": "tokenVC",
+          "type": "uint128"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "key",
+          "type": "bytes32"
+        }
+      ],
+      "name": "positions",
+      "outputs": [
+        {
+          "internalType": "uint128",
+          "name": "tokensOwedCP",
+          "type": "uint128"
+        },
+        {
+          "internalType": "uint128",
+          "name": "tokensOwedVC",
+          "type": "uint128"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "observations",
+      "outputs": [
+        {
+          "internalType": "uint32",
+          "name": "blockTimestamp",
+          "type": "uint32"
+        },
+        {
+          "internalType": "int56",
+          "name": "cumulative",
+          "type": "int56"
+        },
+        {
+          "internalType": "bool",
+          "name": "initialized",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"}],\"name\":\"observations\",\"outputs\":[{\"internalType\":\"uint32\",\"name\":\"blockTimestamp\",\"type\":\"uint32\"},{\"internalType\":\"int56\",\"name\":\"cumulative\",\"type\":\"int56\"},{\"internalType\":\"bool\",\"name\":\"initialized\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"key\",\"type\":\"bytes32\"}],\"name\":\"positions\",\"outputs\":[{\"internalType\":\"uint128\",\"name\":\"tokensOwedCP\",\"type\":\"uint128\"},{\"internalType\":\"uint128\",\"name\":\"tokensOwedVC\",\"type\":\"uint128\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"protocolFees\",\"outputs\":[{\"internalType\":\"uint128\",\"name\":\"tokenCP\",\"type\":\"uint128\"},{\"internalType\":\"uint128\",\"name\":\"tokenVC\",\"type\":\"uint128\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"slot0\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"currentPrice\",\"type\":\"uint256\"},{\"internalType\":\"uint16\",\"name\":\"observationIndex\",\"type\":\"uint16\"},{\"internalType\":\"uint16\",\"name\":\"observationCardinality\",\"type\":\"uint16\"},{\"internalType\":\"uint16\",\"name\":\"observationCardinalityNext\",\"type\":\"uint16\"},{\"internalType\":\"bool\",\"name\":\"unlocked\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"observations(uint256)\":{\"details\":\"You most likely want to use #observe() instead of this method to get an observation as of some amount of time ago, rather than at a specific index in the array.\",\"params\":{\"index\":\"The element of the observations array to fetch\"},\"returns\":{\"blockTimestamp\":\"The timestamp of the observation, Returns cumulative the tick multiplied by seconds elapsed for the life of the project as of the observation timestamp, Returns initialized whether the observation has been initialized and the values are safe to use\"}},\"protocolFees()\":{\"details\":\"Protocol fees will never exceed uint128 max in either token\"},\"slot0()\":{\"returns\":{\"currentPrice\":\"The current price of assets observationIndex The index of the last oracle observation that was written, observationCardinality The current maximum number of observations stored in the pool, observationCardinalityNext The next maximum number of observations, to be updated when the observation. Encoded as two 4 bit values unlocked Whether the project is currently locked to reentrancy\"}}},\"title\":\"Project state that can change\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"observations(uint256)\":{\"notice\":\"Returns data about a specific observation index\"},\"positions(bytes32)\":{\"notice\":\"Returns tokensOwedCP the computed amount of tokenCP owed to the position as of the last mint/burn/poke, Returns tokensOwedVC the computed amount of tokenVC owed to the position as of the last mint/burn/poke\"},\"protocolFees()\":{\"notice\":\"The amounts of tokenCP and tokenVC that are owed to the protocol\"},\"slot0()\":{\"notice\":\"The 0th storage slot in the pool stores many values, and is exposed as a single method to save gas when accessed externally.\"}},\"notice\":\"These methods compose the project's state, and can change with any frequency\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/project/IEnstarV1ProjectState.sol\":\"IEnstarV1ProjectState\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/project/IEnstarV1ProjectState.sol\":{\"keccak256\":\"0x298f9c74e90b91380ccdaaa90101f308248f656f0626db987ebfd75c748bb25f\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://f6f7ef33e9c5dc2547b528895694e9b9e370c23fe37edbd33765324ea06c95e2\",\"dweb:/ipfs/QmQBmW5XX2rspDMqZEYNL4rWJm1PQNa4brUua9cwM7L6QY\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: GPL-2.0-or-later\npragma solidity >=0.8.0;\n\n/// @title Project state that can change\n/// @notice These methods compose the project's state, and can change with any frequency\ninterface IEnstarV1ProjectState {\n    /// @notice The 0th storage slot in the pool stores many values, and is exposed as a single method to save gas\n    /// when accessed externally.\n    /// @return currentPrice The current price of assets\n    /// observationIndex The index of the last oracle observation that was written,\n    /// observationCardinality The current maximum number of observations stored in the pool,\n    /// observationCardinalityNext The next maximum number of observations, to be updated when the observation.\n    /// Encoded as two 4 bit values\n    /// unlocked Whether the project is currently locked to reentrancy\n    function slot0()\n        external\n        view\n        returns (\n            uint256 currentPrice,\n            uint16 observationIndex,\n            uint16 observationCardinality,\n            uint16 observationCardinalityNext,\n            bool unlocked\n        );\n\n    /// @notice The amounts of tokenCP and tokenVC that are owed to the protocol\n    /// @dev Protocol fees will never exceed uint128 max in either token\n    function protocolFees() external view returns (uint128 tokenCP, uint128 tokenVC);\n\n\n    /// Returns tokensOwedCP the computed amount of tokenCP owed to the position as of the last mint/burn/poke,\n    /// Returns tokensOwedVC the computed amount of tokenVC owed to the position as of the last mint/burn/poke\n    function positions(bytes32 key)\n        external\n        view\n        returns (\n            uint128 tokensOwedCP,\n            uint128 tokensOwedVC\n        );\n\n    /// @notice Returns data about a specific observation index\n    /// @param index The element of the observations array to fetch\n    /// @dev You most likely want to use #observe() instead of this method to get an observation as of some amount of time\n    /// ago, rather than at a specific index in the array.\n    /// @return blockTimestamp The timestamp of the observation,\n    /// Returns cumulative the tick multiplied by seconds elapsed for the life of the project as of the observation timestamp,\n    /// Returns initialized whether the observation has been initialized and the values are safe to use\n    function observations(uint256 index)\n        external\n        view\n        returns (\n            uint32 blockTimestamp,\n            int56 cumulative,\n            bool initialized\n        );\n}\n",
+  "sourcePath": "/home/rli07/workspace/evm/enstar/v1-core/contracts/interfaces/project/IEnstarV1ProjectState.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interfaces/project/IEnstarV1ProjectState.sol",
+    "exportedSymbols": {
+      "IEnstarV1ProjectState": [
+        1089
+      ]
+    },
+    "id": 1090,
+    "license": "GPL-2.0-or-later",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1043,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "45:24:13"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IEnstarV1ProjectState",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 1044,
+          "nodeType": "StructuredDocumentation",
+          "src": "71:130:13",
+          "text": "@title Project state that can change\n @notice These methods compose the project's state, and can change with any frequency"
+        },
+        "fullyImplemented": false,
+        "id": 1089,
+        "linearizedBaseContracts": [
+          1089
+        ],
+        "name": "IEnstarV1ProjectState",
+        "nameLocation": "211:21:13",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 1045,
+              "nodeType": "StructuredDocumentation",
+              "src": "239:598:13",
+              "text": "@notice The 0th storage slot in the pool stores many values, and is exposed as a single method to save gas\n when accessed externally.\n @return currentPrice The current price of assets\n observationIndex The index of the last oracle observation that was written,\n observationCardinality The current maximum number of observations stored in the pool,\n observationCardinalityNext The next maximum number of observations, to be updated when the observation.\n Encoded as two 4 bit values\n unlocked Whether the project is currently locked to reentrancy"
+            },
+            "functionSelector": "3850c7bd",
+            "id": 1058,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "slot0",
+            "nameLocation": "851:5:13",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1046,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "856:2:13"
+            },
+            "returnParameters": {
+              "id": 1057,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1048,
+                  "mutability": "mutable",
+                  "name": "currentPrice",
+                  "nameLocation": "927:12:13",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1058,
+                  "src": "919:20:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1047,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "919:7:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1050,
+                  "mutability": "mutable",
+                  "name": "observationIndex",
+                  "nameLocation": "960:16:13",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1058,
+                  "src": "953:23:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  },
+                  "typeName": {
+                    "id": 1049,
+                    "name": "uint16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "953:6:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1052,
+                  "mutability": "mutable",
+                  "name": "observationCardinality",
+                  "nameLocation": "997:22:13",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1058,
+                  "src": "990:29:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  },
+                  "typeName": {
+                    "id": 1051,
+                    "name": "uint16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "990:6:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1054,
+                  "mutability": "mutable",
+                  "name": "observationCardinalityNext",
+                  "nameLocation": "1040:26:13",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1058,
+                  "src": "1033:33:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  },
+                  "typeName": {
+                    "id": 1053,
+                    "name": "uint16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1033:6:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1056,
+                  "mutability": "mutable",
+                  "name": "unlocked",
+                  "nameLocation": "1085:8:13",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1058,
+                  "src": "1080:13:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1055,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1080:4:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "905:198:13"
+            },
+            "scope": 1089,
+            "src": "842:262:13",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 1059,
+              "nodeType": "StructuredDocumentation",
+              "src": "1110:149:13",
+              "text": "@notice The amounts of tokenCP and tokenVC that are owed to the protocol\n @dev Protocol fees will never exceed uint128 max in either token"
+            },
+            "functionSelector": "1ad8b03b",
+            "id": 1066,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "protocolFees",
+            "nameLocation": "1273:12:13",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1060,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1285:2:13"
+            },
+            "returnParameters": {
+              "id": 1065,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1062,
+                  "mutability": "mutable",
+                  "name": "tokenCP",
+                  "nameLocation": "1319:7:13",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1066,
+                  "src": "1311:15:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  },
+                  "typeName": {
+                    "id": 1061,
+                    "name": "uint128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1311:7:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint128",
+                      "typeString": "uint128"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1064,
+                  "mutability": "mutable",
+                  "name": "tokenVC",
+                  "nameLocation": "1336:7:13",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1066,
+                  "src": "1328:15:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  },
+                  "typeName": {
+                    "id": 1063,
+                    "name": "uint128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1328:7:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint128",
+                      "typeString": "uint128"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1310:34:13"
+            },
+            "scope": 1089,
+            "src": "1264:81:13",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 1067,
+              "nodeType": "StructuredDocumentation",
+              "src": "1352:218:13",
+              "text": "Returns tokensOwedCP the computed amount of tokenCP owed to the position as of the last mint/burn/poke,\n Returns tokensOwedVC the computed amount of tokenVC owed to the position as of the last mint/burn/poke"
+            },
+            "functionSelector": "514ea4bf",
+            "id": 1076,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "positions",
+            "nameLocation": "1584:9:13",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1070,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1069,
+                  "mutability": "mutable",
+                  "name": "key",
+                  "nameLocation": "1602:3:13",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1076,
+                  "src": "1594:11:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1068,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1594:7:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1593:13:13"
+            },
+            "returnParameters": {
+              "id": 1075,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1072,
+                  "mutability": "mutable",
+                  "name": "tokensOwedCP",
+                  "nameLocation": "1675:12:13",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1076,
+                  "src": "1667:20:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  },
+                  "typeName": {
+                    "id": 1071,
+                    "name": "uint128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1667:7:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint128",
+                      "typeString": "uint128"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1074,
+                  "mutability": "mutable",
+                  "name": "tokensOwedVC",
+                  "nameLocation": "1709:12:13",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1076,
+                  "src": "1701:20:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  },
+                  "typeName": {
+                    "id": 1073,
+                    "name": "uint128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1701:7:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint128",
+                      "typeString": "uint128"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1653:78:13"
+            },
+            "scope": 1089,
+            "src": "1575:157:13",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 1077,
+              "nodeType": "StructuredDocumentation",
+              "src": "1738:605:13",
+              "text": "@notice Returns data about a specific observation index\n @param index The element of the observations array to fetch\n @dev You most likely want to use #observe() instead of this method to get an observation as of some amount of time\n ago, rather than at a specific index in the array.\n @return blockTimestamp The timestamp of the observation,\n Returns cumulative the tick multiplied by seconds elapsed for the life of the project as of the observation timestamp,\n Returns initialized whether the observation has been initialized and the values are safe to use"
+            },
+            "functionSelector": "252c09d7",
+            "id": 1088,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "observations",
+            "nameLocation": "2357:12:13",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1080,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1079,
+                  "mutability": "mutable",
+                  "name": "index",
+                  "nameLocation": "2378:5:13",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1088,
+                  "src": "2370:13:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1078,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2370:7:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2369:15:13"
+            },
+            "returnParameters": {
+              "id": 1087,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1082,
+                  "mutability": "mutable",
+                  "name": "blockTimestamp",
+                  "nameLocation": "2452:14:13",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1088,
+                  "src": "2445:21:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 1081,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2445:6:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1084,
+                  "mutability": "mutable",
+                  "name": "cumulative",
+                  "nameLocation": "2486:10:13",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1088,
+                  "src": "2480:16:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int56",
+                    "typeString": "int56"
+                  },
+                  "typeName": {
+                    "id": 1083,
+                    "name": "int56",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2480:5:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int56",
+                      "typeString": "int56"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1086,
+                  "mutability": "mutable",
+                  "name": "initialized",
+                  "nameLocation": "2515:11:13",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1088,
+                  "src": "2510:16:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1085,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2510:4:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2431:105:13"
+            },
+            "scope": 1089,
+            "src": "2348:189:13",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1090,
+        "src": "201:2338:13",
+        "usedErrors": []
+      }
+    ],
+    "src": "45:2495:13"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.17+commit.8df45f5f.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.11",
+  "updatedAt": "2022-12-16T16:04:08.849Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "observations(uint256)": {
+        "details": "You most likely want to use #observe() instead of this method to get an observation as of some amount of time ago, rather than at a specific index in the array.",
+        "params": {
+          "index": "The element of the observations array to fetch"
+        },
+        "returns": {
+          "blockTimestamp": "The timestamp of the observation, Returns cumulative the tick multiplied by seconds elapsed for the life of the project as of the observation timestamp, Returns initialized whether the observation has been initialized and the values are safe to use"
+        }
+      },
+      "protocolFees()": {
+        "details": "Protocol fees will never exceed uint128 max in either token"
+      },
+      "slot0()": {
+        "returns": {
+          "currentPrice": "The current price of assets observationIndex The index of the last oracle observation that was written, observationCardinality The current maximum number of observations stored in the pool, observationCardinalityNext The next maximum number of observations, to be updated when the observation. Encoded as two 4 bit values unlocked Whether the project is currently locked to reentrancy"
+        }
+      }
+    },
+    "title": "Project state that can change",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "observations(uint256)": {
+        "notice": "Returns data about a specific observation index"
+      },
+      "positions(bytes32)": {
+        "notice": "Returns tokensOwedCP the computed amount of tokenCP owed to the position as of the last mint/burn/poke, Returns tokensOwedVC the computed amount of tokenVC owed to the position as of the last mint/burn/poke"
+      },
+      "protocolFees()": {
+        "notice": "The amounts of tokenCP and tokenVC that are owed to the protocol"
+      },
+      "slot0()": {
+        "notice": "The 0th storage slot in the pool stores many values, and is exposed as a single method to save gas when accessed externally."
+      }
+    },
+    "notice": "These methods compose the project's state, and can change with any frequency",
+    "version": 1
+  }
+}

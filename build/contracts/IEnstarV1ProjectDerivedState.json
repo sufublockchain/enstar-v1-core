@@ -1,0 +1,416 @@
+{
+  "contractName": "IEnstarV1ProjectDerivedState",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint32[]",
+          "name": "secondsAgos",
+          "type": "uint32[]"
+        }
+      ],
+      "name": "observe",
+      "outputs": [
+        {
+          "internalType": "int56[]",
+          "name": "cumulatives",
+          "type": "int56[]"
+        },
+        {
+          "internalType": "uint160[]",
+          "name": "secondsPerCumulativeX128s",
+          "type": "uint160[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "int24",
+          "name": "lower",
+          "type": "int24"
+        },
+        {
+          "internalType": "int24",
+          "name": "upper",
+          "type": "int24"
+        }
+      ],
+      "name": "snapshotCumulativesInside",
+      "outputs": [
+        {
+          "internalType": "int56",
+          "name": "cumulativeInside",
+          "type": "int56"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint32[]\",\"name\":\"secondsAgos\",\"type\":\"uint32[]\"}],\"name\":\"observe\",\"outputs\":[{\"internalType\":\"int56[]\",\"name\":\"cumulatives\",\"type\":\"int56[]\"},{\"internalType\":\"uint160[]\",\"name\":\"secondsPerCumulativeX128s\",\"type\":\"uint160[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"int24\",\"name\":\"lower\",\"type\":\"int24\"},{\"internalType\":\"int24\",\"name\":\"upper\",\"type\":\"int24\"}],\"name\":\"snapshotCumulativesInside\",\"outputs\":[{\"internalType\":\"int56\",\"name\":\"cumulativeInside\",\"type\":\"int56\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"observe(uint32[])\":{\"details\":\"To get a time weighted average price, you must call this with two values, one representing the beginning of the period and another for the end of the period. E.g., to get the last hour time-weighted average tick, you must call it with secondsAgos = [3600, 0].\",\"params\":{\"secondsAgos\":\"From how long ago each cumulative value should be returned\"},\"returns\":{\"cumulatives\":\"Cumulative values as of each `secondsAgos` from the current block timestamp\",\"secondsPerCumulativeX128s\":\"Cumulative seconds per liquidity-in-range value as of each `secondsAgos` from the current block timestamp\"}},\"snapshotCumulativesInside(int24,int24)\":{\"details\":\"Snapshots must only be compared to other snapshots, taken over a period for which a position existed. I.e., snapshots cannot be compared if a position is not held for the entire period between when the first snapshot is taken and the second snapshot is taken.\",\"returns\":{\"cumulativeInside\":\"The snapshot of the accumulator for the range\"}}},\"title\":\"Project state that is not stored\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"observe(uint32[])\":{\"notice\":\"Returns the cumulative data as of each timestamp `secondsAgo` from the current block timestamp\"},\"snapshotCumulativesInside(int24,int24)\":{\"notice\":\"Returns a snapshot of the cumulative\"}},\"notice\":\"Contains view functions to provide information about the project that is computed rather than stored on the blockchain. The functions here may have variable gas costs.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/project/IEnstarV1ProjectDerivedState.sol\":\"IEnstarV1ProjectDerivedState\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/project/IEnstarV1ProjectDerivedState.sol\":{\"keccak256\":\"0x49008df2e22b9d8444c468a8ce74c9d3533658c92bf548502ff776ee550ba9bb\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://cfcaaab447b1f0d7fa6f4469357fa94dd97bffc0e0a2416c8d1217fd0d587b36\",\"dweb:/ipfs/QmdNGyHQMHwZw81AfA65maAQBDFgNy97KcGPe1Q7HJURBF\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: GPL-2.0-or-later\npragma solidity >=0.8.0;\n\n/// @title Project state that is not stored\n/// @notice Contains view functions to provide information about the project that is computed rather than stored on the\n/// blockchain. The functions here may have variable gas costs.\ninterface IEnstarV1ProjectDerivedState {\n    /// @notice Returns the cumulative data as of each timestamp `secondsAgo` from the current block timestamp\n    /// @dev To get a time weighted average price, you must call this with two values, one representing\n    /// the beginning of the period and another for the end of the period. E.g., to get the last hour time-weighted average tick,\n    /// you must call it with secondsAgos = [3600, 0].\n    /// @param secondsAgos From how long ago each cumulative value should be returned\n    /// @return cumulatives Cumulative values as of each `secondsAgos` from the current block timestamp\n    /// @return secondsPerCumulativeX128s Cumulative seconds per liquidity-in-range value as of each `secondsAgos` from the current block\n    /// timestamp\n    function observe(uint32[] calldata secondsAgos)\n        external\n        view\n        returns (int56[] memory cumulatives, uint160[] memory secondsPerCumulativeX128s);\n\n    /// @notice Returns a snapshot of the cumulative\n    /// @dev Snapshots must only be compared to other snapshots, taken over a period for which a position existed.\n    /// I.e., snapshots cannot be compared if a position is not held for the entire period between when the first\n    /// snapshot is taken and the second snapshot is taken.\n    /// @return cumulativeInside The snapshot of the accumulator for the range\n    function snapshotCumulativesInside(int24 lower, int24 upper)\n        external\n        view\n        returns (\n            int56 cumulativeInside\n        );\n}\n",
+  "sourcePath": "/home/rli07/workspace/evm/enstar/v1-core/contracts/interfaces/project/IEnstarV1ProjectDerivedState.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interfaces/project/IEnstarV1ProjectDerivedState.sol",
+    "exportedSymbols": {
+      "IEnstarV1ProjectDerivedState": [
+        807
+      ]
+    },
+    "id": 808,
+    "license": "GPL-2.0-or-later",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 782,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "45:24:8"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IEnstarV1ProjectDerivedState",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 783,
+          "nodeType": "StructuredDocumentation",
+          "src": "71:228:8",
+          "text": "@title Project state that is not stored\n @notice Contains view functions to provide information about the project that is computed rather than stored on the\n blockchain. The functions here may have variable gas costs."
+        },
+        "fullyImplemented": false,
+        "id": 807,
+        "linearizedBaseContracts": [
+          807
+        ],
+        "name": "IEnstarV1ProjectDerivedState",
+        "nameLocation": "309:28:8",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 784,
+              "nodeType": "StructuredDocumentation",
+              "src": "344:741:8",
+              "text": "@notice Returns the cumulative data as of each timestamp `secondsAgo` from the current block timestamp\n @dev To get a time weighted average price, you must call this with two values, one representing\n the beginning of the period and another for the end of the period. E.g., to get the last hour time-weighted average tick,\n you must call it with secondsAgos = [3600, 0].\n @param secondsAgos From how long ago each cumulative value should be returned\n @return cumulatives Cumulative values as of each `secondsAgos` from the current block timestamp\n @return secondsPerCumulativeX128s Cumulative seconds per liquidity-in-range value as of each `secondsAgos` from the current block\n timestamp"
+            },
+            "functionSelector": "883bdbfd",
+            "id": 796,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "observe",
+            "nameLocation": "1099:7:8",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 788,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 787,
+                  "mutability": "mutable",
+                  "name": "secondsAgos",
+                  "nameLocation": "1125:11:8",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 796,
+                  "src": "1107:29:8",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint32_$dyn_calldata_ptr",
+                    "typeString": "uint32[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 785,
+                      "name": "uint32",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1107:6:8",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint32",
+                        "typeString": "uint32"
+                      }
+                    },
+                    "id": 786,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1107:8:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint32_$dyn_storage_ptr",
+                      "typeString": "uint32[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1106:31:8"
+            },
+            "returnParameters": {
+              "id": 795,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 791,
+                  "mutability": "mutable",
+                  "name": "cumulatives",
+                  "nameLocation": "1200:11:8",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 796,
+                  "src": "1185:26:8",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_int56_$dyn_memory_ptr",
+                    "typeString": "int56[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 789,
+                      "name": "int56",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1185:5:8",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_int56",
+                        "typeString": "int56"
+                      }
+                    },
+                    "id": 790,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1185:7:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_int56_$dyn_storage_ptr",
+                      "typeString": "int56[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 794,
+                  "mutability": "mutable",
+                  "name": "secondsPerCumulativeX128s",
+                  "nameLocation": "1230:25:8",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 796,
+                  "src": "1213:42:8",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint160_$dyn_memory_ptr",
+                    "typeString": "uint160[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 792,
+                      "name": "uint160",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1213:7:8",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint160",
+                        "typeString": "uint160"
+                      }
+                    },
+                    "id": 793,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1213:9:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint160_$dyn_storage_ptr",
+                      "typeString": "uint160[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1184:72:8"
+            },
+            "scope": 807,
+            "src": "1090:167:8",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 797,
+              "nodeType": "StructuredDocumentation",
+              "src": "1263:416:8",
+              "text": "@notice Returns a snapshot of the cumulative\n @dev Snapshots must only be compared to other snapshots, taken over a period for which a position existed.\n I.e., snapshots cannot be compared if a position is not held for the entire period between when the first\n snapshot is taken and the second snapshot is taken.\n @return cumulativeInside The snapshot of the accumulator for the range"
+            },
+            "functionSelector": "a38807f2",
+            "id": 806,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "snapshotCumulativesInside",
+            "nameLocation": "1693:25:8",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 802,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 799,
+                  "mutability": "mutable",
+                  "name": "lower",
+                  "nameLocation": "1725:5:8",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 806,
+                  "src": "1719:11:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int24",
+                    "typeString": "int24"
+                  },
+                  "typeName": {
+                    "id": 798,
+                    "name": "int24",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1719:5:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int24",
+                      "typeString": "int24"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 801,
+                  "mutability": "mutable",
+                  "name": "upper",
+                  "nameLocation": "1738:5:8",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 806,
+                  "src": "1732:11:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int24",
+                    "typeString": "int24"
+                  },
+                  "typeName": {
+                    "id": 800,
+                    "name": "int24",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1732:5:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int24",
+                      "typeString": "int24"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1718:26:8"
+            },
+            "returnParameters": {
+              "id": 805,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 804,
+                  "mutability": "mutable",
+                  "name": "cumulativeInside",
+                  "nameLocation": "1811:16:8",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 806,
+                  "src": "1805:22:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int56",
+                    "typeString": "int56"
+                  },
+                  "typeName": {
+                    "id": 803,
+                    "name": "int56",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1805:5:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int56",
+                      "typeString": "int56"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1791:46:8"
+            },
+            "scope": 807,
+            "src": "1684:154:8",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 808,
+        "src": "299:1541:8",
+        "usedErrors": []
+      }
+    ],
+    "src": "45:1796:8"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.17+commit.8df45f5f.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.11",
+  "updatedAt": "2022-12-16T16:04:08.839Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "observe(uint32[])": {
+        "details": "To get a time weighted average price, you must call this with two values, one representing the beginning of the period and another for the end of the period. E.g., to get the last hour time-weighted average tick, you must call it with secondsAgos = [3600, 0].",
+        "params": {
+          "secondsAgos": "From how long ago each cumulative value should be returned"
+        },
+        "returns": {
+          "cumulatives": "Cumulative values as of each `secondsAgos` from the current block timestamp",
+          "secondsPerCumulativeX128s": "Cumulative seconds per liquidity-in-range value as of each `secondsAgos` from the current block timestamp"
+        }
+      },
+      "snapshotCumulativesInside(int24,int24)": {
+        "details": "Snapshots must only be compared to other snapshots, taken over a period for which a position existed. I.e., snapshots cannot be compared if a position is not held for the entire period between when the first snapshot is taken and the second snapshot is taken.",
+        "returns": {
+          "cumulativeInside": "The snapshot of the accumulator for the range"
+        }
+      }
+    },
+    "title": "Project state that is not stored",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "observe(uint32[])": {
+        "notice": "Returns the cumulative data as of each timestamp `secondsAgo` from the current block timestamp"
+      },
+      "snapshotCumulativesInside(int24,int24)": {
+        "notice": "Returns a snapshot of the cumulative"
+      }
+    },
+    "notice": "Contains view functions to provide information about the project that is computed rather than stored on the blockchain. The functions here may have variable gas costs.",
+    "version": 1
+  }
+}
